@@ -5,11 +5,11 @@ import config from './config'
 import cors from 'cors'
 import { signup, signin, protect } from './utils/auth'
 import { connect } from './utils/db'
-import userRouter from './resources/users/users.router'
-import quizRouter from './resources/quizes/quizes.router'
-import branchRouter from './resources/branches/branches.router'
-import semesterRouter from './resources/semesteres/semesters.router'
-import subjectRouter from './resources/subjects/subjects.router'
+import userRouter from './resources/user/user.router'
+import quizesRouter from './resources/quizes/quizes.router'
+import branchesRouter from './resources/branches/branches.router'
+import semestersRouter from './resources/semesteres/semesters.router'
+import subjectsRouter from './resources/subjects/subjects.router'
 
 export const app = express()
 
@@ -25,10 +25,10 @@ app.post('/api/signin', signin)
 
 app.use('/api', protect) // Here we are protecting all the routes that is after "api"
 app.use('/api/user', userRouter)
-app.use('/api/quiz', quizRouter)
-app.use('/api/branch', branchRouter)
-app.use('/api/subject', subjectRouter)
-app.use('/api/semester', semesterRouter)
+app.use('/api/quizes', quizesRouter)
+app.use('/api/branches', branchesRouter)
+app.use('/api/subjects', subjectsRouter)
+app.use('/api/semesters', semestersRouter)
 
 export const start = async () => {
   try {

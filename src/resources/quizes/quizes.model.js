@@ -1,4 +1,4 @@
-import { User } from '../users/users.model'
+import { User } from '../user/user.model'
 
 const mongoose = require('mongoose')
 
