@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import controllers from './quiz.controllers'
+import controllers from './branch.controller'
 
 const router = Router()
 
