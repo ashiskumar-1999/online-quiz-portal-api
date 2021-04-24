@@ -1,8 +1,8 @@
-import { User } from '../user/user.model'
+import { User } from '../users/users.model'
 
 const mongoose = require('mongoose')
 
-const quizSchema = new mongoose.Schema(
+const quizesSchema = new mongoose.Schema(
   {
     question: {
       type: String,
@@ -34,6 +34,6 @@ const quizSchema = new mongoose.Schema(
    where order matters.
 */
 
-quizSchema.index({ user: 1, question: 1 }, { unique: true })
+quizesSchema.index({ user: 1, question: 1 }, { unique: true })
 
-export const Quiz = mongoose.model('quiz', quizSchema)
+export const Quizes = mongoose.model('quizes', quizesSchema)

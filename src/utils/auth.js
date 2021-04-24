@@ -1,5 +1,5 @@
 import config from '../config'
-import { User } from '../resources/user/user.model'
+import { User } from '../resources/users/users.model'
 import jwt from 'jsonwebtoken'
 
 export const newToken = (user) => {
